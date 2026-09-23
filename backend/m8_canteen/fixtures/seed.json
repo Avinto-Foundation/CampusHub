@@ -1,0 +1,12 @@
+[
+  {"model": "m8_canteen.menuitem", "pk": 1, "fields": {"name": "Samosa", "price": "20.00", "category": "Snacks", "description": "A crisp, deep-fried pastry filled with spiced potatoes and peas."}},
+  {"model": "m8_canteen.menuitem", "pk": 2, "fields": {"name": "Tea", "price": "15.00", "category": "Beverages", "description": "Hot Indian-style masala tea served in a small glass."}},
+  {"model": "m8_canteen.menuitem", "pk": 3, "fields": {"name": "Momo", "price": "120.00", "category": "Snacks", "description": "Steamed dumplings filled with vegetables, served with spicy chutney."}},
+  {"model": "m8_canteen.menuitem", "pk": 4, "fields": {"name": "Veg Sandwich", "price": "45.00", "category": "Snacks", "description": "Grilled sandwich with mixed vegetables and mint chutney."}},
+  {"model": "m8_canteen.menuitem", "pk": 5, "fields": {"name": "Cold Coffee", "price": "60.00", "category": "Beverages", "description": "Blended iced coffee topped with a scoop of ice cream."}},
+  {"model": "m8_canteen.menuitem", "pk": 6, "fields": {"name": "Veg Thali", "price": "90.00", "category": "Meals", "description": "A full meal with rice, dal, two curries, roti, and salad."}},
+
+  {"model": "m8_canteen.order", "pk": 1, "fields": {"name": "Ishaan Kapoor", "phone": "9876543210", "pickup_time": "13:00", "notes": "Less spicy please.", "delivery_address": {"hostel": "A", "room": "204"}, "items": [{"menu_item_id": 1, "qty": 2}, {"menu_item_id": 2, "qty": 1}], "created_at": "2026-09-20T12:30:00Z"}},
+  {"model": "m8_canteen.order", "pk": 2, "fields": {"name": "Tanya Bose", "phone": "9812345678", "pickup_time": "18:30", "notes": "", "delivery_address": {"hostel": "C", "room": "108"}, "items": [{"menu_item_id": 6, "qty": 1}], "created_at": "2026-09-21T17:45:00Z"}},
+  {"model": "m8_canteen.order", "pk": 3, "fields": {"name": "Rohan Das", "phone": "9900112233", "pickup_time": "16:00", "notes": "Extra chutney.", "delivery_address": {"hostel": "B", "room": "112"}, "items": [{"menu_item_id": 3, "qty": 3}, {"menu_item_id": 5, "qty": 2}], "created_at": "2026-09-22T15:00:00Z"}}
+]

@@ -1,0 +1,10 @@
+[
+  {"model": "m4_hostel.complaint", "pk": 1, "fields": {"name": "Ankit Rao", "category": "Plumbing", "description": "The bathroom tap has been leaking continuously for three days.", "status": "Open", "location": {"block": "A", "room": "204"}}},
+  {"model": "m4_hostel.complaint", "pk": 2, "fields": {"name": "Sneha Kulkarni", "category": "Electrical", "description": "The ceiling fan makes a loud grinding noise when switched on.", "status": "In Progress", "location": {"block": "B", "room": "112"}}},
+  {"model": "m4_hostel.complaint", "pk": 3, "fields": {"name": "Vikram Singh", "category": "Furniture", "description": "One leg of the study table is broken and it wobbles badly.", "status": "Resolved", "location": {"block": "A", "room": "310"}}},
+  {"model": "m4_hostel.complaint", "pk": 4, "fields": {"name": "Divya Menon", "category": "Cleaning", "description": "The common washroom on this floor has not been cleaned this week.", "status": "Open", "location": {"block": "C", "room": "108"}}},
+
+  {"model": "m4_hostel.notice", "pk": 1, "fields": {"message": "Water supply will be shut off between 2 PM and 4 PM on Friday for tank cleaning."}},
+  {"model": "m4_hostel.notice", "pk": 2, "fields": {"message": "All residents must submit the annual room inspection form by next Monday."}},
+  {"model": "m4_hostel.notice", "pk": 3, "fields": {"message": "The hostel gate closes at 10 PM sharp starting this week."}}
+]

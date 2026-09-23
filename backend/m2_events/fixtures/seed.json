@@ -1,0 +1,9 @@
+[
+  {"model": "m2_events.event", "pk": 1, "fields": {"title": "Annual Tech Fest", "date": "2026-10-05", "capacity": 50, "registered_count": 50, "description": "A full day of hackathons, robotics demos, and tech talks from alumni."}},
+  {"model": "m2_events.event", "pk": 2, "fields": {"title": "Inter-College Basketball Finals", "date": "2026-10-12", "capacity": 50, "registered_count": 49, "description": "The championship match between the top two teams of this year's league."}},
+  {"model": "m2_events.event", "pk": 3, "fields": {"title": "Freshers' Welcome Party", "date": "2026-10-20", "capacity": 200, "registered_count": 12, "description": "An evening of music, games, and food to welcome the first-year batch."}},
+
+  {"model": "m2_events.announcement", "pk": 1, "fields": {"message": "Tech Fest registrations are now full, a waitlist will open soon."}},
+  {"model": "m2_events.announcement", "pk": 2, "fields": {"message": "Basketball finals tickets must be collected from the sports office by Friday."}},
+  {"model": "m2_events.announcement", "pk": 3, "fields": {"message": "Freshers' Welcome Party volunteers should report an hour early."}}
+]

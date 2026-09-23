@@ -1,0 +1,14 @@
+[
+  {"model": "m1_library.book", "pk": 1, "fields": {"title": "Harry Potter and the Philosopher's Stone", "author": "J.K. Rowling", "available": true, "description": "A boy discovers he is a wizard and starts his first year at Hogwarts School of Witchcraft and Wizardry."}},
+  {"model": "m1_library.book", "pk": 2, "fields": {"title": "The Hobbit", "author": "J.R.R. Tolkien", "available": true, "description": "A reluctant hobbit joins a group of dwarves on a quest to reclaim a mountain from a dragon."}},
+  {"model": "m1_library.book", "pk": 3, "fields": {"title": "Introduction to Algorithms", "author": "Thomas H. Cormen", "available": false, "description": "A comprehensive textbook covering a broad range of algorithms in depth."}},
+  {"model": "m1_library.book", "pk": 4, "fields": {"title": "Clean Code", "author": "Robert C. Martin", "available": true, "description": "A handbook of agile software craftsmanship focused on writing readable code."}},
+  {"model": "m1_library.book", "pk": 5, "fields": {"title": "A Brief History of Time", "author": "Stephen Hawking", "available": true, "description": "An accessible overview of cosmology, from the Big Bang to black holes."}},
+  {"model": "m1_library.book", "pk": 6, "fields": {"title": "Pride and Prejudice", "author": "Jane Austen", "available": false, "description": "A witty look at manners, marriage, and money in early 19th century England."}},
+  {"model": "m1_library.book", "pk": 7, "fields": {"title": "The Pragmatic Programmer", "author": "Andrew Hunt", "available": true, "description": "Practical tips for becoming a more effective and adaptable software developer."}},
+  {"model": "m1_library.book", "pk": 8, "fields": {"title": "Sapiens", "author": "Yuval Noah Harari", "available": true, "description": "A wide-ranging look at how Homo sapiens came to dominate the world."}},
+
+  {"model": "m1_library.reservation", "pk": 1, "fields": {"book": 1, "student_name": "Aditi Sharma", "created_at": "2026-09-01T10:00:00Z"}},
+  {"model": "m1_library.reservation", "pk": 2, "fields": {"book": 3, "student_name": "Rahul Verma", "created_at": "2026-09-02T11:30:00Z"}},
+  {"model": "m1_library.reservation", "pk": 3, "fields": {"book": 6, "student_name": "Meera Iyer", "created_at": "2026-09-03T09:15:00Z"}}
+]

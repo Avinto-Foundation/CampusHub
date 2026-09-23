@@ -1,0 +1,9 @@
+[
+  {"model": "m3_gpa.course", "pk": 1, "fields": {"code": "CS101", "name": "Introduction to Programming", "credits": 4, "description": "Fundamentals of programming using variables, loops, and functions."}},
+  {"model": "m3_gpa.course", "pk": 2, "fields": {"code": "MA201", "name": "Linear Algebra", "credits": 3, "description": "Vectors, matrices, and linear transformations with applications."}},
+  {"model": "m3_gpa.course", "pk": 3, "fields": {"code": "PH101", "name": "Physics for Engineers", "credits": 3, "description": "Mechanics, waves, and thermodynamics for first-year engineering students."}},
+  {"model": "m3_gpa.course", "pk": 4, "fields": {"code": "HS110", "name": "Communication Skills", "credits": 1, "description": "Written and spoken communication skills for academic and professional settings."}},
+
+  {"model": "m3_gpa.gparecord", "pk": 1, "fields": {"student_name": "Priya Nair", "gpa": "3.65"}},
+  {"model": "m3_gpa.gparecord", "pk": 2, "fields": {"student_name": "Karan Mehta", "gpa": "3.20"}}
+]

@@ -1,0 +1,9 @@
+[
+  {"model": "m7_attendance.subject", "pk": 1, "fields": {"subject": "Data Structures", "attended": 30, "total": 40, "description": "Core course covering arrays, linked lists, trees, and graphs."}},
+  {"model": "m7_attendance.subject", "pk": 2, "fields": {"subject": "Digital Electronics", "attended": 29, "total": 40, "description": "Logic gates, combinational and sequential circuits."}},
+  {"model": "m7_attendance.subject", "pk": 3, "fields": {"subject": "Engineering Mathematics", "attended": 44, "total": 59, "description": "Differential equations, linear algebra, and probability."}},
+  {"model": "m7_attendance.subject", "pk": 4, "fields": {"subject": "Technical Elective", "attended": 0, "total": 0, "description": "An elective course that has not started meeting yet this semester."}},
+
+  {"model": "m7_attendance.leaverequest", "pk": 1, "fields": {"name": "Neha Joshi", "date": "2026-10-02", "reason": "Attending a family wedding out of town."}},
+  {"model": "m7_attendance.leaverequest", "pk": 2, "fields": {"name": "Arjun Reddy", "date": "2026-10-08", "reason": "Medical appointment for a follow-up checkup."}}
+]
