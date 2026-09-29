@@ -21,7 +21,13 @@ function BusPage() {
   const [announcementsError, setAnnouncementsError] = useState(false);
 
   const [routeId, setRouteId] = useState("");
+  const [departure, setDeparture] = useState("");
+  const [studentName, setStudentName] = useState("");
   const [studentEmail, setStudentEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [minutesBefore, setMinutesBefore] = useState("");
+  const [channel, setChannel] = useState("");
+  const [repeatWeekdays, setRepeatWeekdays] = useState(false);
   const [formError, setFormError] = useState(false);
   const [formSuccess, setFormSuccess] = useState(false);
 
@@ -61,7 +67,13 @@ function BusPage() {
 
     const body: ReminderRequest = {
       route_id: Number(routeId),
+      departure,
+      student_name: studentName,
       email: studentEmail,
+      phone,
+      minutes_before: Number(minutesBefore),
+      channel,
+      repeat_weekdays: repeatWeekdays,
     };
 
     try {
@@ -74,13 +86,20 @@ function BusPage() {
         throw new Error("Failed to save reminder");
       }
       setFormSuccess(true);
+      setDeparture("");
+      setStudentName("");
       setStudentEmail("");
+      setPhone("");
+      setMinutesBefore("");
+      setChannel("");
+      setRepeatWeekdays(false);
     } catch {
       setFormError(true);
     }
   }
 
   const now = getCurrentTime();
+  const selectedRoute = routes.find((route) => String(route.id) === routeId);
 
   return (
     <div className="page">
@@ -128,7 +147,10 @@ function BusPage() {
         <h2>Remind me before my bus</h2>
         <select
           value={routeId}
-          onChange={(e) => setRouteId(e.target.value)}
+          onChange={(e) => {
+            setRouteId(e.target.value);
+            setDeparture("");
+          }}
           required
         >
           <option value="">Choose a route</option>
@@ -138,6 +160,25 @@ function BusPage() {
             </option>
           ))}
         </select>
+        <select
+          value={departure}
+          onChange={(e) => setDeparture(e.target.value)}
+          disabled={!selectedRoute}
+          required
+        >
+          <option value="">Choose a departure</option>
+          {selectedRoute?.departures.map((time) => (
+            <option key={time} value={time}>
+              {time}
+            </option>
+          ))}
+        </select>
+        <input
+          placeholder="Your name"
+          value={studentName}
+          onChange={(e) => setStudentName(e.target.value)}
+          required
+        />
         <input
           type="email"
           placeholder="Your email"
@@ -145,6 +186,57 @@ function BusPage() {
           onChange={(e) => setStudentEmail(e.target.value)}
           required
         />
+        <input
+          type="tel"
+          placeholder="Phone number"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+          required
+        />
+        <select
+          value={minutesBefore}
+          onChange={(e) => setMinutesBefore(e.target.value)}
+          required
+        >
+          <option value="">Remind me how early?</option>
+          <option value="5">5 minutes before</option>
+          <option value="10">10 minutes before</option>
+          <option value="15">15 minutes before</option>
+          <option value="30">30 minutes before</option>
+        </select>
+        <fieldset className="choice-group">
+          <legend>Send reminder by</legend>
+          <label>
+            <input
+              type="radio"
+              name="channel"
+              value="email"
+              checked={channel === "email"}
+              onChange={(e) => setChannel(e.target.value)}
+              required
+            />
+            Email
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="channel"
+              value="sms"
+              checked={channel === "sms"}
+              onChange={(e) => setChannel(e.target.value)}
+              required
+            />
+            SMS
+          </label>
+        </fieldset>
+        <label className="checkbox-field">
+          <input
+            type="checkbox"
+            checked={repeatWeekdays}
+            onChange={(e) => setRepeatWeekdays(e.target.checked)}
+          />
+          Repeat every weekday
+        </label>
         <button type="submit">Remind me</button>
         {formError && (
           <p className="error">Something went wrong. Please try again.</p>

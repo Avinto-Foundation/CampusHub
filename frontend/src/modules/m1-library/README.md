@@ -19,10 +19,12 @@ own list of the most recent reservations independently of the main book
 list. If that panel cannot load its data, it should say so instead of
 showing a blank space or crashing the page.
 
-At the bottom of the page there is a form to reserve a book: the student
-picks a book and types their name, then submits. If the reservation
-cannot be saved, the page should tell the student something went wrong,
-without showing any technical detail.
+At the bottom of the page there is a form to reserve a book. The student
+picks a book, fills in their name, email, roll number, and phone number,
+chooses a loan period (7, 14, or 21 days) and a pickup location, and can
+tick a box to get an email reminder before the due date. If the
+reservation cannot be saved, the page should tell the student something
+went wrong, without showing any technical detail.
 
 The API for this module is documented in Swagger at /api/docs/ under the
 library section.

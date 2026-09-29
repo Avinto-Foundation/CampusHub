@@ -19,9 +19,13 @@ A "My leave requests" panel on the side loads independently and shows
 previously submitted leave requests. If it cannot load, it should say so
 instead of showing a blank space or crashing the page.
 
-At the bottom of the page is a form to request leave: name, date, and a
-reason. If the leave request cannot be saved, the page should tell the
-student something went wrong, without showing any technical detail.
+At the bottom of the page is a form to request leave: name, roll number,
+email, the subject the leave affects, the type of leave (medical,
+family, college event, or other), the first day of leave typed as
+YYYY-MM-DD, how many days, a reason, and a box to tick once the class
+teacher has been told. If the leave request cannot be saved, the page
+should tell the student something went wrong, without showing any
+technical detail.
 
 The API for this module is documented in Swagger at /api/docs/ under the
 attendance section.

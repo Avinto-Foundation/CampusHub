@@ -5,6 +5,21 @@ import "./styles.css";
 import type { CartItem, MenuItem, Order, OrderRequest } from "./types";
 import { calculateTotal } from "./utils";
 
+const PICKUP_TIMES = [
+  "12:00",
+  "12:30",
+  "13:00",
+  "13:30",
+  "14:00",
+  "16:00",
+  "16:30",
+  "17:00",
+  "17:30",
+  "18:00",
+  "18:30",
+  "19:00",
+];
+
 function CanteenPage() {
   const [menu, setMenu] = useState<MenuItem[]>([]);
   const [cart, setCart] = useState<CartItem[]>([]);
@@ -167,12 +182,18 @@ function CanteenPage() {
           onChange={(e) => setPhone(e.target.value)}
           required
         />
-        <input
-          type="time"
+        <select
           value={pickupTime}
           onChange={(e) => setPickupTime(e.target.value)}
           required
-        />
+        >
+          <option value="">Choose a pickup time</option>
+          {PICKUP_TIMES.map((time) => (
+            <option key={time} value={time}>
+              {time}
+            </option>
+          ))}
+        </select>
         <input
           placeholder="Notes (optional)"
           value={notes}

@@ -16,7 +16,7 @@ that have already been placed. If it cannot load, it should say so
 instead of showing a blank space or crashing the page.
 
 At the bottom of the page is a checkout form: name, phone, a pickup
-time, optional notes, and the delivery hostel and room (as two separate
+time chosen from a list of time slots, optional notes, and the delivery hostel and room (as two separate
 fields). Submitting it should place an order for everything currently in
 the cart. If the order cannot be placed, the page should tell the
 student something went wrong, without showing any technical detail.

@@ -12,5 +12,11 @@ export interface Announcement {
 
 export interface ReminderRequest {
   route_id: number;
+  departure: string;
+  student_name: string;
   email: string;
+  phone: string;
+  minutes_before: number;
+  channel: string;
+  repeat_weekdays: boolean;
 }

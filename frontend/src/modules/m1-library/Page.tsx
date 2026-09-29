@@ -14,6 +14,12 @@ function LibraryPage() {
 
   const [bookId, setBookId] = useState("");
   const [studentName, setStudentName] = useState("");
+  const [email, setEmail] = useState("");
+  const [rollNumber, setRollNumber] = useState("");
+  const [phone, setPhone] = useState("");
+  const [loanDays, setLoanDays] = useState("");
+  const [pickupLocation, setPickupLocation] = useState("");
+  const [dueDateReminder, setDueDateReminder] = useState(false);
   const [formError, setFormError] = useState(false);
   const [formSuccess, setFormSuccess] = useState(false);
 
@@ -56,6 +62,12 @@ function LibraryPage() {
     const body: ReserveBookRequest = {
       book_id: Number(bookId),
       studentName: studentName,
+      email,
+      roll_number: rollNumber,
+      phone,
+      loan_days: Number(loanDays),
+      pickup_location: pickupLocation,
+      due_date_reminder: dueDateReminder,
     };
 
     try {
@@ -70,6 +82,12 @@ function LibraryPage() {
       setFormSuccess(true);
       setBookId("");
       setStudentName("");
+      setEmail("");
+      setRollNumber("");
+      setPhone("");
+      setLoanDays("");
+      setPickupLocation("");
+      setDueDateReminder(false);
     } catch {
       setFormError(true);
     }
@@ -138,6 +156,60 @@ function LibraryPage() {
           onChange={(event) => setStudentName(event.target.value)}
           required
         />
+        <input
+          type="email"
+          placeholder="Your email"
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
+          required
+        />
+        <input
+          placeholder="Roll number"
+          value={rollNumber}
+          onChange={(event) => setRollNumber(event.target.value)}
+          required
+        />
+        <input
+          type="tel"
+          placeholder="Phone number"
+          value={phone}
+          onChange={(event) => setPhone(event.target.value)}
+          required
+        />
+        <fieldset className="choice-group">
+          <legend>Loan period</legend>
+          {["7", "14", "21"].map((days) => (
+            <label key={days}>
+              <input
+                type="radio"
+                name="loan-days"
+                value={days}
+                checked={loanDays === days}
+                onChange={(event) => setLoanDays(event.target.value)}
+                required
+              />
+              {days} days
+            </label>
+          ))}
+        </fieldset>
+        <select
+          value={pickupLocation}
+          onChange={(event) => setPickupLocation(event.target.value)}
+          required
+        >
+          <option value="">Choose a pickup location</option>
+          <option value="main">Main Library</option>
+          <option value="engineering">Engineering Library</option>
+          <option value="hostel">Hostel Reading Room</option>
+        </select>
+        <label className="checkbox-field">
+          <input
+            type="checkbox"
+            checked={dueDateReminder}
+            onChange={(event) => setDueDateReminder(event.target.checked)}
+          />
+          Email me a reminder before the due date
+        </label>
         <button type="submit">Reserve</button>
         {formError && (
           <p className="error">Something went wrong. Please try again.</p>

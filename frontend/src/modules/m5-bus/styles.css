@@ -55,6 +55,28 @@
   max-width: 400px;
 }
 
+.choice-group {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.choice-group legend {
+  padding: 0 4px;
+  font-size: 0.9rem;
+}
+
+.choice-group label,
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .error {
   color: #c0392b;
 }
