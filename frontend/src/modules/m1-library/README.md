@@ -6,10 +6,9 @@ This page shows every book in the library catalogue. Each row shows the
 book's title, author, and whether it is currently available.
 
 There is a search box above the list. Typing in it should narrow the list
-down to books whose title contains what was typed. The match should not
-care about uppercase or lowercase letters, and leading or trailing spaces
-in the search box should be ignored. Clearing the search box should bring
-back every book.
+down to books whose title contains what was typed, so typing "hobbit"
+shows "The Hobbit". Uppercase and lowercase letters don't matter.
+Clearing the search box should bring back every book.
 
 Clicking the "Details" button on a book should pop up a short summary with
 the book's title and the first part of its description.

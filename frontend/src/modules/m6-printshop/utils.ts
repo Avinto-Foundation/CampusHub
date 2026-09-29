@@ -3,5 +3,9 @@ export function calculatePrintCost(
   copies: number,
   isColor: boolean,
 ): number {
-  return pages * (isColor ? 10 : 2);
+  let pricePerPage = 2;
+  if (isColor) {
+    pricePerPage = 10;
+  }
+  return pages * pricePerPage;
 }

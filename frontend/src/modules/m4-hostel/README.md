@@ -14,10 +14,10 @@ should say so instead of showing a blank space or crashing the page.
 
 At the bottom of the page is a form to file a new complaint: name,
 category, a description of the issue, and the block and room (as two
-separate fields). Before the complaint is sent, the room must be filled
-in and the description must contain real text — spaces alone should not
-count as a description. Any such problems should be listed under the
-form before anything is sent to the server. If the complaint cannot be
+separate fields). Before the complaint is sent, the room and the
+description must both be filled in. If either one is empty, a message
+such as "Description is required." should be listed under the form, and
+nothing should be sent to the server. If the complaint cannot be
 saved for another reason, the page should tell the student something
 went wrong, without showing any technical detail.
 

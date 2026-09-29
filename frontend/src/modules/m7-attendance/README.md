@@ -8,9 +8,8 @@ subject with no classes held yet should show 0%, not an error.
 
 Next to the percentage is a badge that says whether the student is
 "Eligible" or "Not eligible" for the exam in that subject. A student is
-eligible once their attendance percentage is at least 75, using the
-exact percentage with no rounding — a subject at 74.9% is not eligible,
-only 75% and above counts.
+eligible when their attendance is 75% or more. A subject at 72.5% is not
+eligible, and a subject at exactly 75% is.
 
 Clicking Details on a subject should pop up a short summary with the
 subject's name and the first part of its description.

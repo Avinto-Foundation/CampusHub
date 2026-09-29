@@ -3,10 +3,10 @@ export function validateComplaint(input: {
   description: string;
 }): string[] {
   const errors: string[] = [];
-  if (!input.room) {
+  if (input.room === "") {
     errors.push("Room is required.");
   }
-  if (input.description === "") {
+  if (input.room === "") {
     errors.push("Description is required.");
   }
   return errors;

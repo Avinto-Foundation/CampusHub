@@ -1,5 +1,9 @@
 import type { CartItem } from "./types";
 
 export function calculateTotal(cart: CartItem[]): number {
-  return cart.reduce((total, item) => total + item.price, 0);
+  let total = 0;
+  for (const item of cart) {
+    total = total + Number(item.price);
+  }
+  return total;
 }

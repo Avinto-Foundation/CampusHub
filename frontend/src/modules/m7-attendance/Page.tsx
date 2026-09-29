@@ -117,7 +117,7 @@ function AttendancePage() {
             return (
               <div className="list-item" key={subject.id}>
                 <div>
-                  <strong>{subject.subject}</strong> — {percentage.toFixed(0)}%
+                  <strong>{subject.subject}</strong> — {percentage.toFixed(1)}%
                   <span className="eligibility-badge">
                     {eligible ? "Eligible" : "Not eligible"}
                   </span>

@@ -50,15 +50,12 @@ function GpaPage() {
     setGrades((prev) => ({ ...prev, [courseId]: value }));
   }
 
-  const enteredCourses = courses
+  const enteredGradePoints = courses
     .filter((course) => grades[course.id] !== undefined && grades[course.id] !== "")
-    .map((course) => ({
-      gradePoint: Number(grades[course.id]),
-      credits: course.credits,
-    }));
+    .map((course) => Number(grades[course.id]));
 
   function handleCalculate() {
-    setCalculatedGpa(calculateGPA(enteredCourses));
+    setCalculatedGpa(calculateGPA(enteredGradePoints));
   }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -68,7 +65,7 @@ function GpaPage() {
 
     const body: SaveGpaRequest = {
       name: studentName,
-      gpa: calculatedGpa ?? 0,
+      gpa: Math.round((calculatedGpa ?? 0) * 100) / 100,
     };
 
     try {
