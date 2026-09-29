@@ -17,4 +17,15 @@ class ReservationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Reservation
-        fields = ["id", "book_id", "book_title", "student_name"]
+        fields = [
+            "id",
+            "book_id",
+            "book_title",
+            "student_name",
+            "email",
+            "roll_number",
+            "phone",
+            "loan_days",
+            "pickup_location",
+            "due_date_reminder",
+        ]

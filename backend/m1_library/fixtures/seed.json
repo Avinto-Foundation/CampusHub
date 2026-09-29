@@ -8,7 +8,7 @@
   {"model": "m1_library.book", "pk": 7, "fields": {"title": "The Pragmatic Programmer", "author": "Andrew Hunt", "available": true, "description": "Practical tips for becoming a more effective and adaptable software developer."}},
   {"model": "m1_library.book", "pk": 8, "fields": {"title": "Sapiens", "author": "Yuval Noah Harari", "available": true, "description": "A wide-ranging look at how Homo sapiens came to dominate the world."}},
 
-  {"model": "m1_library.reservation", "pk": 1, "fields": {"book": 1, "student_name": "Aditi Sharma", "created_at": "2026-09-01T10:00:00Z"}},
-  {"model": "m1_library.reservation", "pk": 2, "fields": {"book": 3, "student_name": "Rahul Verma", "created_at": "2026-09-02T11:30:00Z"}},
-  {"model": "m1_library.reservation", "pk": 3, "fields": {"book": 6, "student_name": "Meera Iyer", "created_at": "2026-09-03T09:15:00Z"}}
+  {"model": "m1_library.reservation", "pk": 1, "fields": {"book": 1, "student_name": "Aditi Sharma", "email": "aditi.sharma@campus.edu", "roll_number": "CS21-014", "phone": "9876500011", "loan_days": 14, "pickup_location": "main", "due_date_reminder": true, "created_at": "2026-09-01T10:00:00Z"}},
+  {"model": "m1_library.reservation", "pk": 2, "fields": {"book": 3, "student_name": "Rahul Verma", "email": "rahul.verma@campus.edu", "roll_number": "EE22-031", "phone": "9876500022", "loan_days": 7, "pickup_location": "engineering", "due_date_reminder": false, "created_at": "2026-09-02T11:30:00Z"}},
+  {"model": "m1_library.reservation", "pk": 3, "fields": {"book": 6, "student_name": "Meera Iyer", "email": "meera.iyer@campus.edu", "roll_number": "HS23-007", "phone": "9876500033", "loan_days": 21, "pickup_location": "hostel", "due_date_reminder": true, "created_at": "2026-09-03T09:15:00Z"}}
 ]

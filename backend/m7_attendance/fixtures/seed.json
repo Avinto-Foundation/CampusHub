@@ -4,6 +4,6 @@
   {"model": "m7_attendance.subject", "pk": 3, "fields": {"subject": "Engineering Mathematics", "attended": 44, "total": 59, "description": "Differential equations, linear algebra, and probability."}},
   {"model": "m7_attendance.subject", "pk": 4, "fields": {"subject": "Technical Elective", "attended": 0, "total": 0, "description": "An elective course that has not started meeting yet this semester."}},
 
-  {"model": "m7_attendance.leaverequest", "pk": 1, "fields": {"name": "Neha Joshi", "date": "2026-10-02", "reason": "Attending a family wedding out of town."}},
-  {"model": "m7_attendance.leaverequest", "pk": 2, "fields": {"name": "Arjun Reddy", "date": "2026-10-08", "reason": "Medical appointment for a follow-up checkup."}}
+  {"model": "m7_attendance.leaverequest", "pk": 1, "fields": {"name": "Neha Joshi", "roll_number": "CS22-045", "email": "neha.joshi@campus.edu", "subject": "Data Structures", "leave_type": "family", "date": "2026-10-02", "days": 2, "reason": "Attending a family wedding out of town.", "informed_teacher": true}},
+  {"model": "m7_attendance.leaverequest", "pk": 2, "fields": {"name": "Arjun Reddy", "roll_number": "EE22-018", "email": "arjun.reddy@campus.edu", "subject": "Digital Electronics", "leave_type": "medical", "date": "2026-10-08", "days": 1, "reason": "Medical appointment for a follow-up checkup.", "informed_teacher": false}}
 ]

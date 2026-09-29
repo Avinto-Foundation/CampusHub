@@ -24,4 +24,14 @@ class ReminderSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Reminder
-        fields = ["id", "route_id", "student_email"]
+        fields = [
+            "id",
+            "route_id",
+            "departure",
+            "student_name",
+            "student_email",
+            "phone",
+            "minutes_before",
+            "channel",
+            "repeat_weekdays",
+        ]

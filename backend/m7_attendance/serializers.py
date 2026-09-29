@@ -12,4 +12,15 @@ class SubjectSerializer(serializers.ModelSerializer):
 class LeaveRequestSerializer(serializers.ModelSerializer):
     class Meta:
         model = LeaveRequest
-        fields = ["id", "name", "date", "reason"]
+        fields = [
+            "id",
+            "name",
+            "roll_number",
+            "email",
+            "subject",
+            "leave_type",
+            "date",
+            "days",
+            "reason",
+            "informed_teacher",
+        ]
