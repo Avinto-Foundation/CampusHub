@@ -1,6 +1,7 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 
+import JobLookup from "./JobLookup";
 import "./styles.css";
 import type { PriceListEntry, PrintJob, PrintJobRequest } from "./types";
 import { calculatePrintCost } from "./utils";
@@ -178,6 +179,8 @@ function PrintPage() {
         )}
         {formSuccess && <p className="success">Print job submitted!</p>}
       </form>
+
+      <JobLookup />
     </div>
   );
 }

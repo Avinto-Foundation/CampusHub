@@ -1,6 +1,7 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 
+import ComplaintLookup from "./ComplaintLookup";
 import "./styles.css";
 import type { Complaint, ComplaintRequest, Notice } from "./types";
 import { validateComplaint } from "./utils";
@@ -151,7 +152,6 @@ function HostelPage() {
           placeholder="Room"
           value={room}
           onChange={(e) => setRoom(e.target.value)}
-          required
         />
         {fieldErrors.length > 0 && (
           <ul className="field-errors">
@@ -168,6 +168,8 @@ function HostelPage() {
         )}
         {formSuccess && <p className="success">Complaint submitted!</p>}
       </form>
+
+      <ComplaintLookup />
     </div>
   );
 }

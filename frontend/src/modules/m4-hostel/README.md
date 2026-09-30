@@ -21,5 +21,11 @@ nothing should be sent to the server. If the complaint cannot be
 saved for another reason, the page should tell the student something
 went wrong, without showing any technical detail.
 
+Below that is a small "Check a complaint by ID" form. Typing a complaint's
+id and clicking "Check" should load just that one complaint from the API
+and show it as "category: status", for example "Electrical: In Progress".
+If no complaint has that id, it should say "No complaint found with that
+ID." instead.
+
 The API for this module is documented in Swagger at /api/docs/ under the
 hostel section.

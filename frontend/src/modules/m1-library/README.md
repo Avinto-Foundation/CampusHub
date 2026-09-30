@@ -25,5 +25,10 @@ tick a box to get an email reminder before the due date. If the
 reservation cannot be saved, the page should tell the student something
 went wrong, without showing any technical detail.
 
+Below that is a small "Find a book by ID" form. Typing a book's id and
+clicking "Find" should load just that one book from the API and show it as
+"title by author", for example "The Hobbit by J.R.R. Tolkien". If no book
+has that id, it should say "No book found with that ID." instead.
+
 The API for this module is documented in Swagger at /api/docs/ under the
 library section.

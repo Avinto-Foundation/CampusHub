@@ -22,5 +22,11 @@ black-and-white, 10 for color). If the print job cannot be submitted,
 the page should tell the student something went wrong, without showing
 any technical detail.
 
+Below that is a small "Check a print job by ID" form. Typing a job's id
+and clicking "Check" should load just that one job from the API and show
+its file name and total cost, for example "poster_design.pdf costs 30".
+If no job has that id, it should say "No print job found with that ID."
+instead.
+
 The API for this module is documented in Swagger at /api/docs/ under the
 print section.

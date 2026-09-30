@@ -26,5 +26,10 @@ reminder comes by email or SMS, and can tick a box to repeat it every
 weekday. If the reminder cannot be saved, the page should tell the
 student something went wrong, without showing any technical detail.
 
+Below that is a small "Find a route by ID" form. Typing a route's id and
+clicking "Find" should load just that one route from the API and show it as
+"Route id: route name", for example "Route 2: Campus - City Center". If no
+route has that id, it should say "No route found with that ID." instead.
+
 The API for this module is documented in Swagger at /api/docs/ under the
 bus section.

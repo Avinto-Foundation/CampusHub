@@ -23,5 +23,11 @@ emergency contact (a name and a phone number, collected as two separate
 fields). If the registration cannot be saved, the page should tell the
 student something went wrong, without showing any technical detail.
 
+Below that is a small "Find an event by ID" form. Typing an event's id and
+clicking "Find" should load just that one event from the API and show it as
+"title on date", for example "Inter-College Basketball Finals on
+2026-10-12". If no event has that id, it should say "No event found with
+that ID." instead.
+
 The API for this module is documented in Swagger at /api/docs/ under the
 events section.

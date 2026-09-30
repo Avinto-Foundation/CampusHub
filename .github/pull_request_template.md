@@ -14,7 +14,7 @@
 
 <!-- Delete every option that doesn't apply. -->
 
-- Bug fix (non-breaking change that fixes an issue)
+- Bug fix (non-breaking change that fixes a bug)
 - New feature (non-breaking change that adds functionality)
 - Requires configuration change
 - Documentation
@@ -25,9 +25,3 @@
 
 1.
 2.
-
-## Related issues
-
-<!-- e.g. Closes #3 -->
-
-Closes #

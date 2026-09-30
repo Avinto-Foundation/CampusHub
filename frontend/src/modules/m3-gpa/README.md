@@ -25,5 +25,10 @@ and saves their calculated GPA. If the GPA cannot be saved, the page
 should tell the student something went wrong, without showing any
 technical detail.
 
+Below that is a small "Find a course by ID" form. Typing a course's id and
+clicking "Find" should load just that one course from the API and show it
+as "code: name", for example "MA201: Linear Algebra". If no course has that
+id, it should say "No course found with that ID." instead.
+
 The API for this module is documented in Swagger at /api/docs/ under the
 gpa section.

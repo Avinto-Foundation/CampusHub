@@ -1,6 +1,7 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 
+import SubjectLookup from "./SubjectLookup";
 import "./styles.css";
 import type { LeaveRequest, LeaveRequestBody, Subject } from "./types";
 import { isEligibleForExam } from "./utils";
@@ -236,6 +237,8 @@ function AttendancePage() {
         )}
         {formSuccess && <p className="success">Leave request submitted!</p>}
       </form>
+
+      <SubjectLookup />
     </div>
   );
 }

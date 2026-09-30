@@ -1,6 +1,7 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 
+import BookLookup from "./BookLookup";
 import "./styles.css";
 import type { Book, Reservation, ReserveBookRequest } from "./types";
 import { filterBooks } from "./utils";
@@ -216,6 +217,8 @@ function LibraryPage() {
         )}
         {formSuccess && <p className="success">Reservation submitted!</p>}
       </form>
+
+      <BookLookup />
     </div>
   );
 }

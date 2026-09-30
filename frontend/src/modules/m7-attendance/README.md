@@ -26,5 +26,11 @@ teacher has been told. If the leave request cannot be saved, the page
 should tell the student something went wrong, without showing any
 technical detail.
 
+Below that is a small "Find a subject by ID" form. Typing a subject's id
+and clicking "Find" should load just that one subject from the API and
+show it as "subject: attended of total classes attended", for example
+"Digital Electronics: 29 of 40 classes attended". If no subject has that
+id, it should say "No subject found with that ID." instead.
+
 The API for this module is documented in Swagger at /api/docs/ under the
 attendance section.

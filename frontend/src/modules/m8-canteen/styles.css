@@ -59,6 +59,18 @@
   max-width: 400px;
 }
 
+.lookup-form {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
 .place-order-button {
   opacity: 0;
 }

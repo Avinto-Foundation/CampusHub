@@ -1,6 +1,7 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 
+import CourseLookup from "./CourseLookup";
 import "./styles.css";
 import type { Course, GpaRecord, SaveGpaRequest } from "./types";
 import { calculateGPA } from "./utils";
@@ -155,6 +156,8 @@ function GpaPage() {
         )}
         {formSuccess && <p className="success">GPA saved!</p>}
       </form>
+
+      <CourseLookup />
     </div>
   );
 }

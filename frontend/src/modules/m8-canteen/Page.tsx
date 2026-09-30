@@ -1,6 +1,7 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 
+import DishLookup from "./DishLookup";
 import "./styles.css";
 import type { CartItem, MenuItem, Order, OrderRequest } from "./types";
 import { calculateTotal } from "./utils";
@@ -219,6 +220,8 @@ function CanteenPage() {
         )}
         {formSuccess && <p className="success">Order placed!</p>}
       </form>
+
+      <DishLookup />
     </div>
   );
 }

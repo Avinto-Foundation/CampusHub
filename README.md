@@ -20,9 +20,9 @@ cover with a test.
    - `npm run dev`
 5. Open http://localhost:5173 in your browser. You should see the
    CampusHub home page listing 8 modules.
-6. In the frontend folder, run `npm test` to see the test runner start
-   (each module's `utils.test.ts` starts out empty — that's expected,
-   see below).
+6. In the frontend folder, run `npm test` to see the test runner start.
+   Every test starts out as a "todo" — that's expected, see0
+   `frontend/TESTING.md`.
 
 ## Project structure
 
@@ -37,7 +37,9 @@ Each frontend module folder (`frontend/src/modules/mN-name/`) has:
 - `types.ts` — TypeScript interfaces for the data
 - `Page.tsx` — the page itself
 - `utils.ts` — one small function with the page's logic
-- `utils.test.ts` — write your tests here
+- `utils.test.ts` — unit tests for the logic function (write yours here)
+- `Page.test.tsx` — integration tests for the whole page (write yours here)
+- `mocks/` — the fake API the page tests use, matching Swagger
 - `styles.css` — the page's styles
 
 ## How to work through a module
@@ -47,19 +49,19 @@ Each frontend module folder (`frontend/src/modules/mN-name/`) has:
 3. Use DevTools (Network, Console, Elements, Sources) and Swagger at
    http://localhost:8000/api/docs/ to figure out why.
 4. Fix it in the code.
-5. Write a test in `utils.test.ts` for the module's logic function, so
-   the bug can't come back unnoticed.
+5. Write tests so the bug can't come back unnoticed: a unit test in
+   `utils.test.ts` for the logic function, and integration tests in
+   `Page.test.tsx` for the rest. See `frontend/TESTING.md` for how, and
+   `frontend/TEST_SETUP.md` for how the test setup works.
 
-Module 8 (Canteen Order) has an extra `SOLUTION.md` with every step
-worked out — read it first if you want to see the whole process
-demonstrated once before trying modules 1-7 yourself.
+Your mentor works through Module 8 (Canteen Order) first, to show the
+whole process once. Then you do the others yourself.
 
 ## Troubleshooting
 
 - **Docker not running**: start Docker Desktop (or your Docker daemon)
   before running `docker compose up`.
-- **Port already in use**: something else is already using port 8000 or
-  5173. Stop that process, or change the port mapping in
+- **Port already in use**: something else is already using port 8000 or 5173. Stop that process, or change the port mapping in
   `docker-compose.yml` (backend) or run `npm run dev -- --port <other>`
   (frontend) — just remember the frontend's Vite proxy still expects the
   backend on port 8000.
@@ -92,8 +94,7 @@ demonstrated once before trying modules 1-7 yourself.
   python manage.py runserver 0.0.0.0:8000
   ```
 
-- **Every `utils.test.ts` fails with "No test suite found"**: that's
-  expected on a fresh clone — those files only contain an import and a
-  reminder comment. The test runner (and the pull request check in
-  `.github/workflows/test.yml`) will pass once you've written at least
-  one test in the file.
+- **Every test shows as "todo"**: that's expected on a fresh clone — the
+  test files only contain `it.todo(...)` reminders. Todos don't fail, so
+  the test runner (and the pull request check in
+  `.github/workflows/test.yml`) passes until you write real tests.

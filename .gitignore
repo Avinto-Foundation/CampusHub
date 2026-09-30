@@ -15,3 +15,6 @@ frontend/dist/
 
 # Mentor-only answer keys
 **/SOLUTION.md
+frontend/src/modules/*/solution/
+frontend/vitest.mentor.config.ts
+MENTOR_TEACHING_PLAN.md

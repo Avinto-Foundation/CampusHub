@@ -1,6 +1,7 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 
+import RouteLookup from "./RouteLookup";
 import "./styles.css";
 import type { Announcement, ReminderRequest, Route } from "./types";
 import { getNextBus } from "./utils";
@@ -243,6 +244,8 @@ function BusPage() {
         )}
         {formSuccess && <p className="success">Reminder set!</p>}
       </form>
+
+      <RouteLookup />
     </div>
   );
 }

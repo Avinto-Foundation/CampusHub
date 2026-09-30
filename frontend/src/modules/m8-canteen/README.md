@@ -21,5 +21,10 @@ fields). Submitting it should place an order for everything currently in
 the cart. If the order cannot be placed, the page should tell the
 student something went wrong, without showing any technical detail.
 
+Below that is a small "Find a dish by ID" form. Typing a menu item's id
+and clicking "Find" should load just that one dish from the API and show
+it as "name costs price", for example "Tea costs 15.00". If no dish has
+that id, it should say "No dish found with that ID." instead.
+
 The API for this module is documented in Swagger at /api/docs/ under the
 canteen section.

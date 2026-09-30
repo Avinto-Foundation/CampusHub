@@ -1,6 +1,7 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 
+import EventLookup from "./EventLookup";
 import "./styles.css";
 import type { Announcement, Event, RegisterRequest } from "./types";
 import { isEventFull } from "./utils";
@@ -189,6 +190,8 @@ function EventsPage() {
         )}
         {formSuccess && <p className="success">Registration submitted!</p>}
       </form>
+
+      <EventLookup />
     </div>
   );
 }
